@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Buy Mac-book pro </title>
+</head>
+
+<body>
+    <!-- main area -->
+    <main>
+        <section class="container mt-4">
+            <div class="row">
+                <!-- img area -->
+                <div class="col-md-6">
+                    <img class="img-fluid" src="./images/mac.png" alt="" srcset="">
+                </div>
+                <!-- details and price calculation area -->
+                <div class="col-md-6">
+                    <!-- Heading text -->
+                    <h1>Customize your Blue 24-inch iMac with APple M1 chip</h1>
+                    <!-- details  -->
+                    <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores,7-core GPU , and
+                        16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt /USB 4 ports Magic
+                        Mouse Keyboard0 Us English </p>
+
+                    <!-- define custom configurations -->
+                    <div class="p-2">
+                        <div>
+                            <h3>Memory</h3>
+                            <input id="defult-memory" type="button" value="8 GB unified memory">
+                            <input id="extra-memory" type="button" value="16 GB unified memory">
+                        </div>
+                        <div class="pt-5">
+                            <h3>Storage</h3>
+                            <input id="defult-storage" type="button" value="256GB SSD storage">
+                            <input id="extra-storage" type="button" value="512GB SSD storage">
+                            <input id="extra-lg-storage" type="button" value="1TB SSD storage">
+
+                        </div>
+                        <div class="pt-5">
+                            <h3>Choose your delivery option</h3>
+                            <input id="free-delivery" type="button" value="Friday,Aug 15 FREE Prime Delivery">
+                            <input id="fast-delivery" type="button" value="Friday, Aug 21 Delivery charge $20">
+
+                        </div>
+                    </div>
+                    <!-- display pricing table base on conf -->
+                    <div class="py-5">
+                        <table class="table">
+
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Best Price</th>
+                                    <td>
+                                        <h4>$ <span>1299</span></h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Extra Memory Cost</th>
+                                    <td>
+                                        <h4>$ <span id="display-memory-cost">0</span></h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Extra Storage Cost</th>
+                                    <td>
+                                        <h4>$ <span id="display-storage-cost">0</span></h4>
+                                    </td>
+                                </tr>
+                                <tr class=" border-bottom-0">
+                                    <th scope="row ">Delivery Charge</th>
+                                    <td>
+                                        <h4>$ <span id="display-delivery-cost">0</span></h4>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>Total Price</th>
+                                    <td>
+                                        <h4>$ <span id="display-total-cost">0</span></h4>
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                        <!-- cupon -->
+                        <h4>Add promo code</h4>
+                        <input id="coupon-text" type="text" placeholder="apply coupon code">
+                        <input class="btn btn-danger" type="button" value="Apply">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h3 class="text-center mb-5">Total: $<span id="total-price-update">1299</span></h3>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

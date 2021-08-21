@@ -56,9 +56,7 @@ function calculateTotalPrice() {
   const storageCost = getAllPrice("display-storage-cost");
   const deliveryCost = getAllPrice("display-delivery-cost");
 
-  const GetpriceTotal = parseInt(
-    baseTotal + memoryCost + storageCost + deliveryCost
-  );
+  const GetpriceTotal = baseTotal + memoryCost + storageCost + deliveryCost;
 
   return GetpriceTotal;
 }

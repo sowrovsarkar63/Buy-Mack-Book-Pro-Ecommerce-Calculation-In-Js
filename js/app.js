@@ -7,7 +7,7 @@ function updatePriceAndConf(idName, price) {
 
   return updatePrice;
 }
-
+// memory even handler
 document
   .getElementById("default-memory")
   .addEventListener("click", function () {

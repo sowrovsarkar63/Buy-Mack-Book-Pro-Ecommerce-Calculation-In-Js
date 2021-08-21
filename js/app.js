@@ -2,8 +2,8 @@
 function updatePriceAndConf(idName, price) {
   const updatePrice = (document.getElementById(idName).innerText = price);
   //   update total price
-  document.getElementById("display-total-cost").innerText =
-    calculateTotalPrice();
+  TotalPrice("display-total-cost");
+  TotalPrice("total-price-update");
 
   return updatePrice;
 }
@@ -41,7 +41,7 @@ document.getElementById("fast-delivery").addEventListener("click", function () {
   updatePriceAndConf("display-delivery-cost", 20);
 });
 
-// get all text from specified id and convert in integer
+// get all text from specified id and convert into integer value
 
 function getAllPrice(inputId) {
   const PriceText = document.getElementById(inputId).innerText;
@@ -49,7 +49,7 @@ function getAllPrice(inputId) {
   return Price;
 }
 
-// price total
+// price total calculation
 function calculateTotalPrice() {
   const baseTotal = getAllPrice("base-price");
   const memoryCost = getAllPrice("display-memory-cost");
@@ -63,4 +63,31 @@ function calculateTotalPrice() {
   return GetpriceTotal;
 }
 
-// Update total price
+// totalprice
+function TotalPrice(idname) {
+  const TotalPrice = (document.getElementById(idname).innerText =
+    calculateTotalPrice());
+  return TotalPrice;
+}
+
+// handle apply coupon even
+
+document.getElementById("discount-btn").addEventListener("click", function () {
+  let couponText = document.getElementById("coupon-text");
+  const getTotalText = document.getElementById("display-total-cost").innerText;
+
+  let getTotal = parseInt(getTotalText);
+  // check coupon
+  if (couponText.value == "stevekaku") {
+    let discountCalc = (getTotal * 20) / 100;
+
+    let discoutCalcFloat = parseFloat(discountCalc);
+    let discountPrice = getTotal - discoutCalcFloat;
+    // set total price after using coupon
+    document.getElementById("total-price-update").innerText = discountPrice;
+    // empty input field
+    couponText.value = "";
+  } else {
+    alert("No promo code out there"); //if there is no coupn then just alert
+  }
+});
